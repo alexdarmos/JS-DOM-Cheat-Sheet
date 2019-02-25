@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The DOM Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/reset.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css" integrity="sha256-aan9tQnm7lVach/6JxYyrQRlheajRD+UBDwwWo3tAHQ="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" media="all" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="styles/highlight-custom-theme.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,500,700,700i|Roboto:900" rel="stylesheet">
+</head>
+
+<body>
+  <section class="section">
+      <h1 class="is-size-1">A List</h1>
+      <div class="flex-container split-panel">
+        <div class="column column-center-content">
+          <div class="fake-webpage--phone">
+            <div class="fake-webpage--phone-speaker"></div>
+            <div class="fake-webpage--body">
+              <div id="list" class="rendered-code">
+                <h1 class="is-size-3" id="header">
+                  List
+                </h1>
+                <h2 class="is-size-4">
+                  Buy groceries
+                </h2>
+                <ul>
+                  <li id="one" class="hot">
+                    <em>fresh</em> figs
+                  </li>
+                  <li id="two" class="hot">
+                    pine nuts
+                  </li>
+                  <li id="three" class="hot">
+                    honey
+                  </li>
+                  <li id="four">balsamic vinegar</li>
+                </ul>
+              </div>
+            </div>
+            <div class="fake-webpage--phone-bottom">
+              <div class="fake-webpage--phone-home-button">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <pre class="gray-card"><code class="html">
+  &lt;html&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;page&quot;&gt;
+            &lt;h1 id=&quot;header&quot;&gt;
+                List
+            &lt;/h1&gt;
+            &lt;h2&gt;
+                Buy groceries
+            &lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li id=&quot;one&quot; class=&quot;hot&quot;&gt;
+                    &lt;em&gt;fresh&lt;/em&gt; figs
+                &lt;/li&gt;
+                &lt;li id=&quot;two&quot; class=&quot;hot&quot;&gt;
+                    pine nuts
+                &lt;/li&gt;
+                &lt;li id=&quot;three&quot; class=&quot;hot&quot;&gt;
+                    honey
+                &lt;/li&gt;
+                &lt;li id=&quot;four&quot;&gt;balsamic vinegar&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;script src=&quot;js/list.js&quot;&gt;&lt;/script&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+  &lt;/html&gt; </code>
+    </pre>
+        </div>
+      </div>
+  </section>
+  <img class="w-100" src="./images/dom-white-text.png">
+  <footer class="footer">
+    &copy;2019 <a class="text-lisa" href="https://lisa-lemons.com" target="_blank" rel="noopener noreferrer">Lisa Lemons</a>
+  </footer>
+  <script src="./lib/highlight//highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The DOM Tree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css" integrity="sha256-aan9tQnm7lVach/6JxYyrQRlheajRD+UBDwwWo3tAHQ="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="all" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="styles/dom-styles.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="styles/highlight-custom-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,500,700,700i|Roboto:900" rel="stylesheet">    
+</head>
+
+<body>
+    <!--
+        For the purpose of posterity, here is how I generated
+        the image for the DOM structure.
+
+    -->
+    <section class="section">
+        <h1 class="is-size-1">A List's DOM Tree</h1>
+        <div class="flex-container">
+            <div class="gray-card w-100">
+                <div class="dom-tree">
+                    <!-- document -->
+                    <div class="dom-tree--vertical">
+                        <div class="dom-tree--vertical align-items-center">
+                            <div class="dom-tree--rectangle dom-tree--document-node">
+                                document
+                            </div>
+                            <div class="dom-tree--vertical-line"></div>
+                            <div class="dom-tree--rectangle dom-tree--element-node">
+                                html
+                            </div>
+                            <div class="dom-tree--vertical-line"></div>
+                            <div class="dom-tree--rectangle dom-tree--element-node">
+                                body
+                            </div>
+                        </div>
+                        <div class="dom-tree--vertical-line"></div>
+                        <div class="dom-tree--vertical-line"></div>
+                        <!-- #page -->
+                        <div class="dom-tree--vertical">
+                            <div class="dom-tree--horizontal dom-tree--horizontal__justify-center" id="div-page">
+                                <div class="dom-tree--rectangle dom-tree--element-node">
+                                    div<span class="italic-bold">#page</span>
+                                </div>
+                                <div class="dom-tree--horizontal-line"></div>
+                                <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                    attribute
+                                </div>
+                            </div>
+                            <div class="dom-tree--vertical-line"></div>
+                            <div class="dom-tree--horizontal-line" id="giant-horizontal-line"></div>
+                            <div class="dom-tree--horizontal justify-space-around">
+                                <!-- h1#header -->
+                                <div class="dom-tree--vertical">
+                                    <div class="dom-tree--vertical-line"></div>
+                                    <div class="dom-tree--vertical-line cross"></div>
+                                    <div class="dom-tree--horizontal">
+                                        <div class="dom-tree--vertical">
+                                            <div class="dom-tree--rectangle dom-tree--element-node">
+                                                h1<span class="italic-bold">#header</span>
+                                            </div>
+                                            <div class="dom-tree--vertical-line"></div>
+                                            <div class="dom-tree--rectangle dom-tree--text-node">
+                                                text
+                                            </div>
+                                        </div>
+                                        <div class="dom-tree--horizontal-line dom-tree--horizontal-line__center-top"></div>
+                                        <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                            attribute
+                                        </div>
+                                    </div>
+                                </div><!-- ./ h1#header -->
+                                <!-- h2 -->
+                                <div class="dom-tree--vertical">
+                                    <div class="dom-tree--vertical-line"></div>
+                                    <div class="dom-tree--rectangle dom-tree--element-node">
+                                        h2
+                                    </div>
+                                    <div class="dom-tree--vertical-line"></div>
+                                    <div class="dom-tree--rectangle dom-tree--text-node">
+                                        text
+                                    </div>
+                                </div><!-- ./ h2 -->
+
+                                <!-- ul -->
+                                <div class="dom-tree--vertical" id="dom-tree-list-items-column">
+                                    <div class="dom-tree--vertical-line"></div>
+                                    <div class="dom-tree--rectangle dom-tree--element-node align-self-center">
+                                        ul
+                                    </div>
+                                    <div class="dom-tree--vertical-line" id="ul-giant-line"></div>
+                                    <!-- all li's -->
+                                    <div class="dom-tree--horizontal" id="dom-tree-list-items">
+                                        <div class="dom-tree--horizontal-line" id="second-large-horizontal-line"></div>
+                                        <!-- li#one.hot -->
+                                        <div class="dom-tree--vertical">
+                                            <div class="dom-tree--vertical-line dom-tree--vertical-line__flex-start"></div>
+                                            <div class="dom-tree--horizontal">
+                                                <div class="dom-tree--rectangle dom-tree--element-node">
+                                                    li<span class="italic-bold">#one.hot</span>
+                                                </div>
+                                                <div class="dom-tree--horizontal-line"></div>
+                                                <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                                    attribute
+                                                </div>
+                                            </div>
+                                            <div class="dom-tree--vertical-line" id="li-one-vertical-line"></div>
+                                            <div class="dom-tree--vertical-line"></div>
+                                            <div class="dom-tree--horizontal-line" id="li-one-second-horizontal-line"></div>
+                                            <div class="dom-tree-vertical">
+                                                <div class="dom-tree--horizontal">
+                                                    <div class="dom-tree--vertical">
+                                                        <div class="dom-tree--vertical-line"></div>
+                                                        <div class="dom-tree--rectangle dom-tree--element-node">
+                                                            em
+                                                        </div>
+                                                        <div class="dom-tree--vertical-line"></div>
+                                                        <div class="dom-tree--rectangle dom-tree--text-node">
+                                                            text
+                                                        </div>
+                                                    </div>
+                                                    <div class="dom-tree--vertical">
+                                                        <div class="dom-tree--vertical-line"></div>
+                                                        <div class="dom-tree--rectangle dom-tree--text-node">
+                                                            text
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div><!-- ./ li#one.hot -->
+
+                                        <!-- li#two.hot -->
+                                        <div class="dom-tree--vertical">
+                                            <div class="dom-tree--vertical-line dom-tree--vertical-line__flex-start"></div>
+                                            <div class="dom-tree--horizontal">
+                                                <div class="dom-tree--vertical">
+                                                    <div class="dom-tree--rectangle dom-tree--element-node">
+                                                        li<span class="italic-bold">#two.hot</span>
+                                                    </div>
+                                                    <div class="dom-tree--vertical-line"></div>
+                                                    <div class="dom-tree--rectangle dom-tree--text-node">
+                                                        text
+                                                    </div>
+                                                </div>
+                                                <div class="dom-tree--horizontal-line dom-tree--horizontal-line__center-top"></div>
+                                                <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                                    attribute
+                                                </div>
+                                            </div>
+                                        </div><!-- ./ li#two.hot -->
+
+                                        <!-- li#three.hot -->
+                                        <div class="dom-tree--vertical">
+                                            <div class="dom-tree--vertical-line dom-tree--vertical-line__flex-start"></div>
+                                            <div class="dom-tree--horizontal">
+                                                <div class="dom-tree--vertical">
+                                                    <div class="dom-tree--rectangle dom-tree--element-node">
+                                                        li<span class="italic-bold">#three.hot</span>
+                                                    </div>
+                                                    <div class="dom-tree--vertical-line"></div>
+                                                    <div class="dom-tree--rectangle dom-tree--text-node">
+                                                        text
+                                                    </div>
+                                                </div>
+                                                <div class="dom-tree--horizontal-line dom-tree--horizontal-line__center-top"></div>
+                                                <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                                    attribute
+                                                </div>
+                                            </div>
+                                        </div><!-- ./ li#three.hot -->
+
+                                        <!-- li#four.hot -->
+                                        <div class="dom-tree--vertical">
+                                            <div class="dom-tree--vertical-line dom-tree--vertical-line__flex-start"></div>
+                                            <div class="dom-tree--horizontal">
+                                                <div class="dom-tree--vertical">
+                                                    <div class="dom-tree--rectangle dom-tree--element-node">
+                                                        li<span class="italic-bold">#four.hot</span>
+                                                    </div>
+                                                    <div class="dom-tree--vertical-line"></div>
+                                                    <div class="dom-tree--rectangle dom-tree--text-node">
+                                                        text
+                                                    </div>
+                                                </div>
+                                                <div class="dom-tree--horizontal-line dom-tree--horizontal-line__center-top"></div>
+                                                <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                                    attribute
+                                                </div>
+                                            </div>
+                                        </div><!-- ./ li#four.hot -->
+
+
+                                    </div><!-- ./ all li's -->
+                                </div><!-- ./ ul -->
+
+                                <!-- script -->
+                                <div class="dom-tree--vertical">
+                                    <div class="dom-tree--vertical-line"></div>
+                                    <div class="dom-tree--vertical-line cross"></div>
+                                    <div class="dom-tree--horizontal" id="script-attribute">
+                                        <div class="dom-tree--rectangle dom-tree--element-node">
+                                            script
+                                        </div>
+                                        <div class="dom-tree--horizontal-line"></div>
+                                        <div class="dom-tree--rectangle dom-tree--attribute-node">
+                                            attribute
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ./ script -->
+                                <!-- ./ #page -->
+                            </div>
+                        </div>
+                    </div> <!-- ./ document -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

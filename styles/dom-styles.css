@@ -1,0 +1,111 @@
+/* DOM Tree styling */
+.dom-tree {
+    padding: 50px;
+}
+.dom-tree--rectangle {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    margin-top: -2px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    height: 35px;
+    z-index: 1;
+    box-shadow: var(--elevate-1-box-shadow);
+    /* color: white; */
+}
+.dom-tree--document-node {
+    background: var(--hue-4);
+}
+.dom-tree--element-node {
+    background: var(--hue-6);
+}
+.dom-tree--attribute-node {
+    background: var(--hue-5);
+}
+.dom-tree--text-node {
+    background: var(--hue-4);
+}
+.dom-tree--vertical {
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+}
+.dom-tree--horizontal {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dom-tree--vertical-line {
+    height: 25px;
+    width: 2px;
+    background: var(--black);
+    /* margin-top: -5px; */
+    /* margin-bottom: -5px; */
+    align-self: center;
+}
+.dom-tree--horizontal-line {
+    height: 2px;
+    width: 45px;
+    background: var(--black);
+    margin-left: -5px;
+    margin-right: -5px;
+    align-self: center;
+}
+.dom-tree--horizontal-line__center-top {
+    align-self: flex-start;
+    margin-top: calc(35px/2);
+}
+.dom-tree--horizontal__justify-center {
+    justify-content: center;
+}
+#dom-tree-list-items {
+    position: relative;
+    left: -800px;
+    /* border-top: 2px solid var(--black); */
+    justify-content: space-between;
+    width: 90vw;
+    margin-top:50px;
+}
+#dom-tree-list-items-column {
+    width: 0;
+}
+.dom-tree--vertical-line__flex-start {
+    align-self: flex-start;
+    margin-left: calc(104px/2); 
+}
+.cross {
+    margin-bottom: -18px;
+}
+#div-page {
+    margin-top: -35px;
+    margin-left: 5px;
+}
+#giant-horizontal-line {
+    position: relative;
+    left: 7px;
+    width: 1059px;
+}
+#ul-giant-line {
+    height: 150px;
+    margin-bottom: -50px;
+}
+#li-one-vertical-line {
+    margin-top: -16px;
+}
+#second-large-horizontal-line {
+    position: absolute;
+    top: 0;
+    left: 59px;
+    width: 1035px;
+}
+#li-one-second-horizontal-line {
+    width: 190px;
+}
+#script-attribute{
+    position: relative;
+    left: 11px;
+}

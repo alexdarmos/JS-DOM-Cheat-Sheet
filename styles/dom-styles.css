@@ -1,6 +1,8 @@
 /* DOM Tree styling */
 .dom-tree {
     padding: 50px;
+    color: white;
+    font-weight: 700;
 }
 .dom-tree--rectangle {
     margin-block-start: 2px;
@@ -14,7 +16,6 @@
     height: 35px;
     z-index: 1;
     box-shadow: var(--elevate-1-box-shadow);
-    /* color: white; */
 }
 .dom-tree--document-node {
     background: var(--hue-4);
